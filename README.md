@@ -6,7 +6,7 @@ A Postgres bigint column is mapped to BigInteger through Hibernate.
 
 This effect triggers when using native queries, where no Java class is bound through an entity, otherwise Hibernate would use the class defined in the entity.
 
-This happens with native queries via Spring Data, as Spring Data gives no hint on how to extract the column from the result set.
+In this example this happens with native queries via Spring Data, but queries without Spring Data are affected in the same way.
 
 ## Possible fix
 In `test.MyDialect` is a line ```registerHibernateType( Types.BIGINT, StandardBasicTypes.LONG.getName() );```.
