@@ -28,10 +28,7 @@ Login to psql via admin user
 CREATE USER test WITH PASSWORD 'test';
 
 -- Create database
-CREATE DATABASE test;
-
--- Give user right to access/modify newly created database
-GRANT ALL PRIVILEGES ON DATABASE test TO test;
+CREATE DATABASE test OWNER test;
 ```
 
 
